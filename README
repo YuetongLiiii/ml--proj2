@@ -1,0 +1,49 @@
+COMP30027 Machine Learning 2024
+Assignment 2
+
+Brief introduction about how to implement the code
+
+---------------------------------------------
+
+Preprocessing: There is a MarkDown section called "Preprocessing"
+We only implement the method 2 for the final preprocessing processs
+method 1 is only used to explore and contrast
+you need to run the functions for methods2 first
+so you can preprocess the test data in "Final Model" section
+
+----------------------------------------------
+
+For Modelling part
+We try to find the better hyperparameter for each model and use them in model.
+You can see, we train the model by using the seperated tranning data from the whole traning data
+and use the rest of them for validation. You can see the results for validation data for each model in this part.
+
+
+-----------------------------------------------
+
+For the final test data
+
+In 'Final Model' section, I already load the both test dataset and train dataset by using the relative path, eg: 'project_data/test_dataset.csv'. project_data is a folder in the ML_2 folder which store the trainning data, test data and provided embedding data. So, you can directly load these data file when traning and testing.
+
+how to run each model: I summary the model from 'modelling' part in 'final model' part. you can run this model first, then you need to use the whole traning dataset to fit the model and finally predict the label for test datatset.
+
+where to find the results for that model: I set the relative path again for storing these predicted labels of of test data of each model. You can see in ML_2 folder, there is a 'test_label' folder, which store Test predictions, in Kaggle format for each model that we designed.
+
+When you run Eg: "rf_results.to_csv('test_label/predictions_rf.csv', index=True, index_label='id')". The csv will be saved in test_label folder
+
+---------------------------------------------------------------------
+
+This is the one hot encorder for content rating for both training and test data
+content_rating_encoder.joblib
+
+
+These models that used to do Model Stacking for Feature Generation to transform features of the object data type.
+For consistency, we will use these models in test data as well for preprocessing step.
+plot_keywords_model.joblib
+movie_title_model.joblib
+language_model
+genres_model
+country_model
+country_model
+content_rating_model.joblib
+
